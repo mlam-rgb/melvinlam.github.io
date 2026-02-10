@@ -4,33 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Melvin Lam</title>
+
   <style>
-    body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
-    header { margin-bottom: 24px; }
-    h1 { margin: 0; }
-    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    h1, h2 {
+      margin-bottom: 8px;
+    }
+
+    header {
+      margin-bottom: 32px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Melvin Lam</h1>
-    <p>Musician and Berklee student focused on music business and building real-world projects.</p>
+    <p>Musician and Berklee student interested in music, creativity, and building sustainable paths for artists.</p>
   </header>
 
   <section class="card">
     <h2>Bio</h2>
     <p>
-      I’m a flutist and band leader based in Cambridge. I’m interested in how artists grow audiences,
-      build community, and create sustainable careers without depending fully on social media algorithms.
+      I’m a flutist and creative musician based in Cambridge. Alongside performing and studying music business,
+      I’m interested in how artists grow, find direction, and navigate the space between creativity and sustainability.
     </p>
   </section>
 
   <section class="card">
-    <h2>Extra Section: What I’m working on</h2>
-    <p>
-      I’m exploring ways for artists to connect directly with fans, using simple tools that are realistic to ship
-      and test without big budgets.
-    </p>
-  </section>
-</body>
-</html>
+    <h2 onclick="togglePurpose()">What I Care About Right Now</h2>
+
+    <p id="purposeText" style="display: none;">
+      Right now I’m focused on learning new tools and concepts that help me better understand how to create real
+      solutions for artists who are growing musically but feel stuck when it comes to direction, visibility, or structure.
+      I’m curious about why some artists with real talent find momentum while others struggle to move forward, even when
+      the potential is clearly there. I’m especially interested in frameworks and ways of thinking that align with how I
+      already approach problems and allow me to go deeper instead of reacting on instinct. This matters to me because I
+      want to develop ideas that support artists in that unclear middle stage between growth and sustainability. If someone
+      follows what I’m working on, they’ll see a process of le
