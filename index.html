@@ -12,16 +12,32 @@
       margin: 40px auto;
       padding: 0 16px;
       line-height: 1.6;
+      color: #222;
     }
+
     section {
       margin: 24px 0;
       padding: 16px;
       border: 1px solid #ddd;
       border-radius: 12px;
     }
-    #toggleHeading {
+
+    /* Make the summary look like a heading */
+    summary {
+      list-style: none; /* removes the default triangle on some browsers */
       cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: bold;
       margin: 0;
+    }
+
+    /* Remove default marker (triangle) on Chrome/Safari */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .purpose-text {
+      margin-top: 12px;
     }
   </style>
 </head>
@@ -47,36 +63,21 @@
   </section>
 
   <section>
-    <h2 id="toggleHeading">What I Care About Right Now</h2>
+    <details>
+      <summary>What I Care About Right Now</summary>
 
-    <p id="purposeText" style="display: none; margin-top: 12px;">
-      Right now I’m focused on learning new tools and concepts that help me better understand how to create real
-      solutions for artists who are growing musically but feel stuck when it comes to direction, visibility, or structure.
-      I’m curious about why some artists with real talent find momentum while others struggle to move forward, even when
-      the potential is clearly there. I’m especially interested in frameworks and ways of thinking that align with how I
-      already approach problems and allow me to go deeper instead of reacting on instinct. This matters to me because I
-      want to develop ideas that support artists in that unclear middle stage between growth and sustainability. If someone
-      follows what I’m working on, they’ll see a process of learning, testing, and refining ideas into more thoughtful and
-      practical solutions.
-    </p>
+      <p class="purpose-text">
+        Right now I’m focused on learning new tools and concepts that help me better understand how to create real
+        solutions for artists who are growing musically but feel stuck when it comes to direction, visibility, or structure.
+        I’m curious about why some artists with real talent find momentum while others struggle to move forward, even when
+        the potential is clearly there. I’m especially interested in frameworks and ways of thinking that align with how I
+        already approach problems and allow me to go deeper instead of reacting on instinct. This matters to me because I
+        want to develop ideas that support artists in that unclear middle stage between growth and sustainability. If someone
+        follows what I’m working on, they’ll see a process of learning, testing, and refining ideas into more thoughtful and
+        practical solutions.
+      </p>
+    </details>
   </section>
-
-  <script>
-    // Wait until the page is fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      const heading = document.getElementById("toggleHeading");
-      const text = document.getElementById("purposeText");
-
-      // Toggle show/hide on click
-      heading.addEventListener("click", function () {
-        if (text.style.display === "none") {
-          text.style.display = "block";
-        } else {
-          text.style.display = "none";
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
