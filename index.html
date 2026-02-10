@@ -15,12 +15,12 @@
       color: #222;
     }
 
-    h1, h2 {
-      margin-bottom: 8px;
-    }
-
     header {
       margin-bottom: 32px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
     }
 
     .card {
@@ -40,19 +40,23 @@
 
   <header>
     <h1>Melvin Lam</h1>
-    <p>Musician and Berklee student interested in music, creativity, and building sustainable paths for artists.</p>
+    <p>
+      Musician and Berklee student interested in creativity, music business,
+      and building sustainable paths for artists.
+    </p>
   </header>
 
   <section class="card">
     <h2>Bio</h2>
     <p>
-      I’m a flutist and creative musician based in Cambridge. Alongside performing and studying music business,
-      I’m interested in how artists grow, find direction, and navigate the space between creativity and sustainability.
+      I’m a flutist and creative musician based in Cambridge. Alongside performing
+      and studying music business, I’m interested in how artists grow, find direction,
+      and move toward sustainable creative careers.
     </p>
   </section>
 
   <section class="card">
-    <h2 onclick="togglePurpose()">What I Care About Right Now</h2>
+    <h2 id="toggleHeading">What I Care About Right Now</h2>
 
     <p id="purposeText" style="display: none;">
       Right now I’m focused on learning new tools and concepts that help me better understand how to create real
@@ -60,4 +64,26 @@
       I’m curious about why some artists with real talent find momentum while others struggle to move forward, even when
       the potential is clearly there. I’m especially interested in frameworks and ways of thinking that align with how I
       already approach problems and allow me to go deeper instead of reacting on instinct. This matters to me because I
-      want to develop ideas that support artists in that unclear middle stage between growth and sustainability.
+      want to develop ideas that support artists in that unclear middle stage between growth and sustainability. If someone
+      follows what I’m working on, they’ll see a process of learning, testing, and refining ideas into more thoughtful and
+      practical solutions.
+    </p>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heading = document.getElementById("toggleHeading");
+      const text = document.getElementById("purposeText");
+
+      heading.addEventListener("click", function () {
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
